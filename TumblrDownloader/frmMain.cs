@@ -232,6 +232,9 @@ namespace TumblrDownloader
                 ini.IniWriteValue("Settings", "ApiKey", apiKeyTXT.Text);
                 ini.IniWriteValue("Settings", "DownloadFolder", folderTXT.Text);
             }
+
+            parsingThread.Abort();
+            downloadThread.Abort();
         }
     }
 }
