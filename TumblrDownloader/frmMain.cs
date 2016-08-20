@@ -107,7 +107,7 @@ namespace TumblrDownloader
                 tumblrUserTXT.Enabled = false;
                 browseBTN.Enabled = false;
                 startBTN.Text = "Stop";
-                downloadThread = new Thread(DownloadStuff);
+                downloadThread = new Thread(DownloadStuff) { IsBackground = true };
                 downloadThread.Start();
             }
 
@@ -129,7 +129,7 @@ namespace TumblrDownloader
             downloaded = 0;
             toDownload = 0;
             UpdateStatus("download started");
-            parsingThread = new Thread(ParsePage);
+            parsingThread = new Thread(ParsePage) { IsBackground = true };
             parsingThread.Start();
 
             while (parsingThread.IsAlive)
@@ -171,8 +171,6 @@ namespace TumblrDownloader
             Invoke(new MethodInvoker(() => tumblrUserTXT.Enabled = true));
             Invoke(new MethodInvoker(() => browseBTN.Enabled = true));
             downloadQueue.Clear();
-            downloadThread.Abort();
-            parsingThread.Abort();
         }
 
         void frmMain_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -245,12 +243,6 @@ namespace TumblrDownloader
                 ini.IniWriteValue("Settings", "ApiKey", apiKeyTXT.Text);
                 ini.IniWriteValue("Settings", "DownloadFolder", folderTXT.Text);
             }
-
-            if (parsingThread != null && parsingThread.IsAlive)
-                parsingThread.Abort();
-
-            if (downloadThread != null && downloadThread.IsAlive)
-                downloadThread.Abort();
         }
     }
 }
