@@ -86,6 +86,23 @@ namespace TumblrDownloader
         {
             if (!isDownloading)
             {
+                if (string.IsNullOrEmpty(apiKeyTXT.Text))
+                {
+                    MessageBox.Show("ApiKey is empty");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(tumblrUserTXT.Text))
+                {
+                    MessageBox.Show("User was not specified");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(folderTXT.Text) || !Directory.Exists(folderTXT.Text))
+                {
+                    MessageBox.Show("Specified directory is invalid");
+                    return;
+                }
                 apiKeyTXT.Enabled = false;
                 tumblrUserTXT.Enabled = false;
                 browseBTN.Enabled = false;
