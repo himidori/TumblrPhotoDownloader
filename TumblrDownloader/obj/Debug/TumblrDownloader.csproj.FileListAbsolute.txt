@@ -1,9 +1,0 @@
-D:\projects\C#\TumblrDownloader\TumblrDownloader\bin\Debug\TumblrDownloader.exe.config
-D:\projects\C#\TumblrDownloader\TumblrDownloader\bin\Debug\TumblrDownloader.exe
-D:\projects\C#\TumblrDownloader\TumblrDownloader\bin\Debug\TumblrDownloader.pdb
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.csprojResolveAssemblyReference.cache
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.frmMain.resources
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.Properties.Resources.resources
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.csproj.GenerateResource.Cache
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.exe
-D:\projects\C#\TumblrDownloader\TumblrDownloader\obj\Debug\TumblrDownloader.pdb
