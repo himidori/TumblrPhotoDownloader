@@ -60,7 +60,7 @@
             this.stTheme1.Name = "stTheme1";
             this.stTheme1.Radius = 5;
             this.stTheme1.Size = new System.Drawing.Size(373, 268);
-            this.stTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
+            this.stTheme1.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.stTheme1.Title = "TumblrDownloader";
             this.stTheme1.TitleColorBack = System.Drawing.Color.Black;
             this.stTheme1.TitleColorFront = System.Drawing.Color.White;
@@ -327,6 +327,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TumblrDownloader";
             this.TransparencyKey = System.Drawing.Color.Magenta;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
