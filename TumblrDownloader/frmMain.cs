@@ -229,8 +229,11 @@ namespace TumblrDownloader
                 ini.IniWriteValue("Settings", "DownloadFolder", folderTXT.Text);
             }
 
-            parsingThread.Abort();
-            downloadThread.Abort();
+            if (parsingThread != null && parsingThread.IsAlive)
+                parsingThread.Abort();
+
+            if (downloadThread != null && downloadThread.IsAlive)
+                downloadThread.Abort();
         }
     }
 }
